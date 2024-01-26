@@ -13,52 +13,13 @@ public class Tester {
 
    @Test
    public void partA () {
-      FrogSimulation test1 = new FrogSimulation(24,5);
-      test1.setPart("A");
-      test1.setHopValues(new int[]{5,7,-2,8,6});
-      boolean res = test1.simulate();
-      assertEquals(res,true);
-      test1.setHopValues(new int[]{6,7,6,6});
-      res = test1.simulate();
-      assertEquals(res,true);
-      test1.setHopValues(new int[]{6,-6,31});
-      res = test1.simulate();
-      assertEquals(res,true);
-      test1.setHopValues(new int[]{4,2,-8});
-      res = test1.simulate();
-      assertEquals(res,false);
-      test1.setHopValues(new int[]{5,4,2,4,3});
-      res = test1.simulate();
-      assertEquals(res,false);
-      test1.setHopValues(new int[]{24,-7,-6,-6});
-      res = test1.simulate();
-      assertEquals(res,true);
-      test1 = new FrogSimulation(15,3);
-      test1.setPart("A");
-      test1.setHopValues(new int[]{6,7,11});
-      res = test1.simulate();
-      assertEquals(res,true);
+      assertEquals(CheckDigit.getCheck(283415),6);
+      assertEquals(CheckDigit.getCheck(2183),2);
    }
    @Test
    public void partB(){
-      FrogSimulation test1 = new FrogSimulation(24,5);
-      test1.setPart("B");
-      int [][] testMatrix = {{5,7,-2,8,6},
-                        {6,7,6,6},
-                        {6,-6,31},
-                        {4,2,-8},
-                        {5,4,2,4,3}};
-      test1.setMultipleHopValues(testMatrix);
-      assertEquals(test1.runSimulations(5),.6,.01);
-      int[][] testMatrix2 ={{5,7,-2,8,6}, 
-                      {5,4,2,4,3}};
-      test1.setMultipleHopValues(testMatrix2);
-      assertEquals(test1.runSimulations(2),.5,.01);
-      int [][] testMatrix3 = {{5,7,-2,8,6},
-                        {6,7,6,6},
-                        {6,-6,31}};
-      test1.setMultipleHopValues(testMatrix3);
-      assertEquals(test1.runSimulations(3),1.0,.01);    
+      assertEquals(CheckDigit.isValid(1592), true);
+      assertEquals(CheckDigit.isValid(1593),false);
    }
 
 

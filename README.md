@@ -10,7 +10,11 @@ Correct solution and scoring guidelines are available at this link:
 
  The correct answer outputs should be as follows.   
 
- 
+```
+Part A
+getCheck(283415) -> 6
+getCheck(2183) -> 2
+```
 ```
 Part B
 isValid(1592) -> true => valid combo of 159 and its check digit 2
